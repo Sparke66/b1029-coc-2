@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFO 2300</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="info2300.html">INFO 2300</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>INFO 2300</h1>
+        <p>Welcome to the INFO 2300 page.</p>
+
+        <h2> Porting Static Website to Dynamic</h2>
+        <p> Simply change the extension of each webpage from .html to .php (make sure to update any links or references accordingly).</p>
+
+        <h2> PHP Partials</h2>
+        <p> PHP partials allow you to reuse code snippets across multiple pages. Create a separate PHP file for the header, footer, and any other common elements, then include them in your main pages using the &lt;?php include 'header.php'; ?&gt; syntax.</p>
+
+        <h3> header.php</h3>
+        <pre><code>&lt;header&gt;
+    &lt;h1 id=&quot;title&quot;&gt;&lt;?php echo $title; ?&gt; - INFO 2300&lt;/h1&gt;
+
+    &lt;nav id=&quot;menu&quot;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;index.php&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;citations.php&quot;&gt;Citations&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+        </code></pre>
+
+        <h3> webpage_name.php</h3>
+        <pre><code>&lt;body&gt;
+    ...
+    &lt;?php include(&#39;includes/header.php&#39;); ?&gt;
+    ...
+    &lt;main&gt;
+    ...
+        </code></pre>
+
+        <h2> Creating Forms: The Basics</h2>
+        <p> This code demonstrates a simple form programmed on the client side.</p>
+        <pre><code>&lt;form method = &quot;get&quot; action = &quot;search.php&quot;&gt;
+    &lt;label for = &quot;search-query&quot;&gt;Search:&lt;/label&gt;
+    &lt;input type = &quot;text&quot; id = &quot;search-query&quot; name = &quot;query&quot;&gt;
+    &lt;input type = &quot;submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+    </main>
+</body>
+
+</html>
